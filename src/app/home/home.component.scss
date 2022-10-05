@@ -1,3 +1,4 @@
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +13,12 @@ header {
     padding: 20px 50px;
     box-shadow: 0 1px 8px #ddd;
 }
+
 #nav-title {
     margin-right: auto;
     font-size: 1.5em;
 }
+
 header li {
     list-style: none;
     display: inline-block;
@@ -30,4 +33,16 @@ header a {
 
 header a:hover {
     color: #b2dfdb;
+}
+
+.input-group{
+    height: 6vh;
+    width: 39vw;
+    margin-top: 15vh;
+    margin-left: 15vw;
+}
+.button{
+    height: 6vh;
+    width: 10vw;
+    margin-left: 2vw;
 }
