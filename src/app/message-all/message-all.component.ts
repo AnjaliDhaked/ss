@@ -36,9 +36,14 @@ export class MessageAllComponent implements OnInit {
 
 
 
+      
       const element = document.createElement('div');
-      element.innerHTML= msg;
-      element.classList.add("msg-info-name");
+    const element2 = document.createElement('div');
+    element.classList.add('talk-bubble' ,'tri-right' , 'round', 'btm-left');
+    element2.classList.add('talktext');
+    element.appendChild(element2);
+    element2.innerHTML= `<div>${msg.name}: ${msg.msg}</div>`
+   
       document.getElementById('msg-text')?.appendChild(element);
       
     })
@@ -58,7 +63,11 @@ export class MessageAllComponent implements OnInit {
 
   sendMessage(msg:any){
     console.log(msg,"msg");
-    this.socket.emit('message', msg);
+    let messagg={
+       msg:msg,
+       name:this.user
+    }
+    this.socket.emit('message', messagg);
     // const element1 = document.createElement('div');
     // element1.innerHTML= this.user;
     // element1.classList.add("msg-info-name");
@@ -66,8 +75,11 @@ export class MessageAllComponent implements OnInit {
    
 
     const element = document.createElement('div');
-    element.innerHTML= msg;
-    element.classList.add("msg-info-name");
+    const element2 = document.createElement('div');
+    element.classList.add('talk-bubble' ,'tri-right' , 'round', 'btm-left');
+    element2.classList.add('talktext');
+    element.appendChild(element2);
+    element2.innerHTML= `<div>${this.user}: ${msg}</div>`
     document.getElementById('msg-text')?.appendChild(element);
    
     this.message='';

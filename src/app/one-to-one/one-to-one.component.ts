@@ -51,6 +51,7 @@ export class OneToOneComponent implements OnInit {
         });
 
         this.socket.on('peer-receive', (msg) => {
+          console.log(msg);
           this.addMessages(msg, this.name);
          
         });

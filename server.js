@@ -68,8 +68,8 @@ io.on("connection", (socket) => {
   // io.socket.in(room).emit('rRoomID', () => {})
 
   socket.on("message", (user) => {
-    console.log(user);
-    socket.broadcast.emit("rmes", user);
+    console.log(user,users[socketId]);
+    socket.broadcast.emit("rmes",  { name: users[socketId], message: user });
   });
 
   socket.on("messageOne", (user) => {
