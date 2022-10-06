@@ -35,9 +35,6 @@ export class ChatBoxComponent implements OnInit {
 
   ngAfterViewInit() {
     this.socket.emit('iam', this.username);
-
-    this.roomArea = document.querySelector('#roomsName');
-
     // Recieve messages
 
     this.socket.on('userActiveList', (msg) => {
@@ -78,17 +75,6 @@ export class ChatBoxComponent implements OnInit {
       roomList: this.roomsList,
       messageType,
     });
-
-    if (messageType == 'messageGroup') {
-      if (!this.groups[id]) {
-        this.groups[id] = '1';
-        this.socket.emit('joinRoom', id);
-      }
-    }
-
-    if (messageType == 'message') {
-      this.socket.emit('message', id);
-    }
   }
 
   commonData(data: any) {

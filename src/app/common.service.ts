@@ -19,6 +19,8 @@ export class CommonService {
     this.data.next(data);
   }
 
+  
+
   // dataDetails(data) {
   //   this.details.next(data);
   // }

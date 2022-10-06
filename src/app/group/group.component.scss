@@ -1,0 +1,63 @@
+.user-list{
+    height: 7vh;
+    background-color: rgb(247, 209, 241);
+    border: 1px solid;
+}
+.text{
+    padding: 1vh;
+}
+
+
+
+
+
+
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 1px 8px #ddd;
+}
+
+#nav-title {
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(82, 3, 90);
+    transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+    color: #b2dfdb;
+}
+
+.input-group{
+    height: 6vh;
+    width: 39vw;
+    margin-top: 15vh;
+    margin-left: 15vw;
+}
+.button{
+    height: 6vh;
+    width: 10vw;
+    margin-left: 2vw;
+}

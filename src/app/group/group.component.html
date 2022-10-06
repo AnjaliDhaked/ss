@@ -1,1 +1,18 @@
-<p>group works!</p>
+<section>
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Create Room" aria-label="roomname" aria-describedby="basic-addon1" name="" [(ngModel)]="roomsName">
+      <div>
+          <button type="button" class="button btn btn-dark" (click)="createRoom()">Create room</button>
+          
+      </div>
+<h1>{{roo}}</h1>
+      <div *ngFor="let room of roomsList">
+        <div>{{roo}}</div>
+        <div routerLink="/one" class="user-list" value={{room[0]}}
+          (click)="chatWindow($event,'messageGroup')">{{room[1]}}</div>
+      </div>
+    </div>
+</section>
